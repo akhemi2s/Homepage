@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+
+       body{
+            display: grid;
+            
+            grid-template-columns: none;
+            grid-template-rows: 1fr 6fr 0.5fr ;
+            
+            
+       }
+       header{
+            background-color:  rgba(50,50,50,1);
+       }
+
+       footer{
+           background-color: rgb(6, 46, 95);
+       }
+
+       .main{
+            display: grid;
+            background-color: rgba(100,100,100,0.2);
+            justify-items: center;
+            
+            
+            
+       }
+       img {
+            max-width: 100%;
+            height: auto;
+        }
+
+       header ul{
+            
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            justify-content: flex-start;
+            align-items: flex-start;
+       }
+
+       header ul li a{
+           color:white;
+           text-decoration: none;
+           font-size: 5vw;
+       }
+
+      
+       
+
+       @media only screen and (min-width: 600px){
+        body{
+            display: grid;
+            
+            grid-template-columns: none;
+            grid-template-rows: 0.5fr 6fr 0.5fr ;
+            
+            
+         }
+            header{
+                height: ;
+            }
+            
+            header ul{
+                
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+             }
+             header ul li {
+                 margin: 2vh;
+             }
+             
+             header ul li a{
+                font-size: 3vw;
+             }
+            
+               
+       }
+
+       @media only screen and (min-width: 900px){
+           body{
+               height: 100vh;
+           }
+            .main{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 10fr;
+                grid-template-areas: "title title" "img text";
+            }
+            .title{
+                grid-area: title;
+            }
+            .text{
+                padding-top: 15vh;
+                font-size: 3vh;
+            }
+
+            button{
+                font-size: 3vh;
+            }
+            header ul li a{
+                font-size: 30px;
+             }
+             img{
+                 width: 20vw;
+                 height: auto;
+             }
+
+       }
+
+       
+    </style>
+</head>
+<body>
+
+    <header>
+        <ul>
+            <li><a href="#">The book series</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">The Author</a></li>
+            <li><a href="#">Free Resources</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <h2 class="title" style="text-align: center;">you dont know Javscript</h1>
+        <img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png" alt="">
+        <div class= "text" style="display: flex; align-items: center; flex-direction: column;">
+            <p style="text-align:center ;">
+                Dont just drift through javascript <br><br> Understand how javascript works <br><br>
+                start your journey through the bumpyside of javascript <br>
+            </p>
+            <button style="color: white; background-color: orange; ">Order your copy now</button>
+
+        </div>
+    </div>
+    <footer style="display: flex; align-items: center; flex-direction: column; justify-content: flex-end;">
+        <p  style="text-align:center; color: white;">the first ebook in the book series is absolutely free</p>
+        <button style="color: white; background-color: orange;">Find out more about this offer</button>
+
+    </footer>
+
+    
+</body>
+</html>

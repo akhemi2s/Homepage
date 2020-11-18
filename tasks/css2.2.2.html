@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                border: solid 1px;
+                width: 500px;
+                height: 500px;
+            }
+            .imgg{
+                display: none;
+                
+            }
+
+           input:checked ~ div .imgg{ 
+               display:block; 
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>übung 2.2</h1>
+        <input type="checkbox" id="checkbox" name="checkbox" />
+        <label for="checkbox">hide and show via checkbox</label>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Hochschule_Bonn-Rhein-Sieg_Wolfgang_G%C3%B6ddertz_Induktion.jpg"  class="imgg" alt="fehler" style="width: 500px; height: 500px; ">
+        </div>
+    </body>
+</html>

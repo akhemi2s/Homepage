@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <style>
+           body{
+               background-color: #b2d6d1;
+           }
+           .myForm{
+
+            margin-left: 550px;
+            margin-top:50px ;
+            border: 1px solid;
+            width: 700px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color:white;
+           }
+         .myRadio1, .myCheckbox{
+                
+                display: flex;
+            }
+         input[type="text"],input[type="Email"] ,  input[type="number"], select {
+			width: 200px;
+			border: 1px solid;
+            height: 35px;
+			border-radius: 2px;
+         }
+         
+
+         select{
+             background-color: rgb(220,220, 220);
+             
+         }
+            
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Survey Form</h1>
+        <div class="myForm">
+            
+            <p align="center">Let us Know how we can improve FreeCodeCamp</p>
+            <form>
+                <div style="margin-left: 240px;">
+                    <label for="name">* Name: </label>
+                    <input type="text" name="name" id="name" placeholder="enter your name"> <br> <br>
+                    <label for="email">* Email: </label>
+                    <input type="email" name="emai" id="email" placeholder="enter your Email"><br> <br>
+                    <label for="age" style="margin-left: 15px;"> * Age: </label>
+                    <input type="number" name="age" id="age" placeholder="Age"> <br> <br>
+                </div>
+
+                <label for="role">Which option best describes your current role:</label> 
+                <select id="role" name="role">
+                    <option value="student" selected>student</option>
+                    <option value="teacher">teacher</option> 
+                </select> <br> <br>
+                <div class="myRadio1" style="margin-left: 20px;">
+                    <div>* How likely is that you would recommend <br> FreeCodeCamp for a friend?</div>
+                    
+                    <div>
+                        <input type="radio" id="definetely" name="recommend" value="definetely">
+                        <label for="male">Definetely</label><br>
+                        <input type="radio" id="maybe" name="recommend" value="maybe">
+                        <label for="maybe">Maybe</label><br>
+                        <input type="radio" id="notsure" name="recommend" value="notsure">
+                        <label for="notsure">Not sure</label><br><br>
+                    </div>
+                </div> 
+
+                <br><br>
+                <label for="fcc" style="margin-left: 85px;">What do you most like in FCC?</label> 
+                <select id="fcc" name="fcc">
+                    <option value="default" selected>Select an option</option>
+                    <option value="html">HTML</option> 
+                    <option value="css">CSS</option>
+                </select> <br> <br>
+
+                <div class="myCheckbox">
+                    <div>Things that should be improved in the future <br> (Check all that apply)</div>
+                    <div>
+                        <input type="checkbox" id="frontend" name="frontend" value="frontend">
+                        <label for="frontend"> Front-end Projects</label><br>
+                        <input type="checkbox" id="backend" name="backend" value="backend">
+                        <label for="backend"> Back-end Projects</label><br>
+                        <input type="checkbox" id="data" name="data" value="data">
+                        <label for="data"> Data Visualization</label></div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

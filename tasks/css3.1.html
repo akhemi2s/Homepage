@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+           
+            gap: 1vh;
+            
+         }
+
+        .child1{
+            background-color: red;
+            height: 15vh;
+            
+        }
+
+        .child2{
+            display: flex;
+            height: 70vh;
+            gap:1vh ;
+            flex-wrap: wrap;
+            
+        }
+        .green{
+            background-color: green;
+            flex-basis: 150px;
+            flex-shrink: 2;
+            
+        }
+
+        .blue{
+            background-color: blue ;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis:468px ;
+            
+            
+        }
+
+        .purple{
+            background-color: purple ;
+            width: 150px;
+           
+            
+           
+        }
+
+        @media only screen and (max-width: 794px){
+                
+            .child2{
+               height: auto;
+            }
+            
+            .green{
+            
+            flex-basis: 150px;
+            flex-grow: 1;
+            
+            height: 800px;
+            
+            }
+
+            .blue{
+            background-color: blue ;
+            flex-grow: 1;
+            flex-basis:300px ;
+            
+            height: 800px;
+            
+            
+            }
+
+           .purple{
+            background-color: purple ;
+            flex-basis: 400px;
+            flex-grow: 1;
+            height: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 480px){
+            .child2{
+                
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                
+            }
+           .green{
+                width: 100%;
+                flex-basis: 50px;
+
+                
+            }
+
+           .blue{
+                flex-grow:1;
+                width: 100%;
+                flex-basis: 800px;
+                
+                
+            }
+            .purple{
+                width: 100%;
+                flex-basis: 50px;
+               
+                
+            }
+       
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="child1">
+        
+    </div>
+    
+    <div class="child2">
+        <div class="green">
+            
+        </div>
+        <div class="blue">
+           
+        </div>
+        <div class="purple">
+            
+        </div>
+    </div>
+
+    
+</body>
+</html>

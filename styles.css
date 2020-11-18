@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 5fr auto;
+    grid-template-areas: "header" "main" "footer";
+    min-height: 100vh;
+    background: linear-gradient(to right,#bbe4f1, transparent 100%);
+    
+}
+
+/* -------------MyHeader---------------- */
+header{
+   
+    position: sticky;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    height: 100%;
+}
+
+.logo{
+   margin-left: 2vw;
+}
+
+/* .navbar *{
+    border: 1px solid;
+} */
+
+
+
+#toggle{
+    display: none;
+}
+
+#togglelabel{
+    margin-left: auto;
+    margin-right: 4vw;
+    font-size: 1.5rem;
+
+}
+
+.navbar{
+    display: none;
+    grid-column: 1/3;
+    margin-top: 20px;
+    
+    
+    
+}
+
+.navbar ul{
+    display: inline-flex;
+    flex-direction: column;
+    list-style: none;
+    
+
+}
+.navbar ul li{
+    
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1vh;
+    
+    
+
+}
+.navbar ul li a{
+    
+    text-decoration: none;
+    color: black;
+    
+    font-size: 1.5rem;
+    font-family: 'Concert One', cursive;
+    width: 100%;
+    
+}
+
+.navbar ul li a:hover{
+    color: rgb(120,120,120);
+}
+
+.navbar ul li a.active:hover{
+    color: rgb(220, 220, 220);
+}
+
+#toggle:checked + .navbar {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+    
+    
+}
+
+.subtasks{
+    display: none;
+    
+}
+
+.subsubtasks{
+    display: none;
+}
+
+a i{
+    margin-right: 0.5vh;
+    margin-left: 1vh ;
+}
+
+.navbar ul li a.active{
+    color: white;
+    background: linear-gradient(to right,rgb(50,50,50), rgb(200,200,200));;
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
+}
+.navbar ul li:hover .subtasks{
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.navbar ul li:hover .subtasks ul{
+    margin-left: 5vw;
+    display: inline-flex;
+    align-items: flex-start;
+  
+}
+
+.navbar ul li:hover .subtasks ul li{
+    text-align: left;
+  
+}
+
+
+
+.navbar ul li .subtasks a{
+    font-size: 1.5rem;
+}
+
+.navbar ul li:hover .subtasks ul li:hover .subsubtasks{
+    display: inline-flex;
+    margin-left: 15px;
+}
+
+.navbar ul li:hover .subtasks ul li:hover .subsubtasks ul{
+    
+}
+.navbar ul li:hover .subtasks ul li:hover .subsubtasks ul li a{
+    font-size: 1.2rem;
+}
+
+
+/* ----------EndHeader----------- */
+/* -------------main-------------- */
+
+
+/* ---------------EndMain------------- */
+/* -------------Footer------------ */
+footer{
+
+}
+
+
+@media only screen and (min-width: 490px){
+    
+    *{
+        /* border: 1px solid; */
+    }
+    #togglelabel{
+        display:none;
+    }
+
+    header{
+        grid-template-columns:1fr;
+        grid-template-rows: auto auto;
+        align-items: start;
+    }
+
+    .logo{
+        display:flex;
+        justify-content: center;
+        margin-top: 5px;
+        margin-left: 0;
+       
+    }
+    .logo img{
+       
+        
+    }   
+
+    .navbar *{
+      
+      
+       }
+        
+    .navbar{
+        display: inline-flex;
+        justify-content: space-around;
+        margin-top: 0px;
+        height: 10vh;
+      
+    }
+    
+    .navbar ul{
+        display: inline-block;
+        
+        list-style: none;
+        
+        
+     }
+
+     .navbar ul li{
+        display: inline-flex;
+        
+        flex-direction: column;
+       
+        margin-right: 1vw;
+        margin-left: 1vw ;
+        margin-top: 3vh;
+     }
+     .navbar ul li a{
+        display: inline;
+        font-size: 4vw;
+        
+
+     }
+     
+    
+
+     .navbar ul li:hover .subtasks{
+         display: inline-flex;
+         flex-direction: column;
+         margin-left: auto;
+        
+     }
+
+     .navbar ul li:hover .subtasks ul{
+         display: inline-flex;
+         flex-direction: column;
+         margin:0;         
+         
+         
+     }
+
+     .navbar ul li:hover .subtasks ul li{
+         margin-left: 1vw;
+         margin-top: 0vh;
+         
+         
+     }
+     .navbar ul li:hover .subtasks ul li a{
+        font-size: 3.5vw;
+    }
+
+     .navbar ul li:hover .subtasks ul li:hover .subsubtasks{
+        margin: 0;
+     }
+
+     .navbar ul li:hover .subtasks ul li:hover .subsubtasks ul{
+       
+        margin-left:2vw;
+     }
+
+     .navbar ul li:hover .subtasks ul li:hover .subsubtasks ul li{
+        margin-top: 0.5vh;
+        margin: 0;
+     }
+
+     .navbar ul li:hover .subtasks ul li:hover .subsubtasks ul li a{
+         font-size: 3vw ;
+     }
+    
+}
+
+     @media only screen and (min-width: 900px){
+         
+
+         a i{
+             margin-left: 0;
+             margin-right: 5px;
+         }
+        header{
+            all: unset;
+            display: flex;
+            align-items: center;
+            height:auto ;
+        }
+        .logo{
+            margin-left: 5px;
+        }
+        header .navbar{
+            
+            margin-left: auto;
+            height:100%;
+            
+            width: 100%;
+            
+            
+        }
+        .navbar ul{
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: flex-end;
+           height: 40px;
+           width: 100%;
+           margin-right: 20px;
+        }
+    
+         .navbar ul li{
+             
+            margin: unset;
+            margin-left: 2vw;
+            width: 140px;
+            align-items: center;
+            
+         }
+         .navbar ul li a{
+          
+          margin-right:0;
+          padding-left: 5px  ;
+          font-size: 1.6rem ;  
+    
+         }
+
+         
+         
+        
+    
+         .navbar ul li:hover .subtasks{
+            margin-top:10px ;
+            
+         }
+    
+         .navbar ul li:hover .subtasks ul{
+
+             height: auto;
+             
+         }
+    
+         .navbar ul li:hover .subtasks ul li{
+            /* display: flex; */
+
+
+             
+             
+         }
+         .navbar ul li:hover .subtasks ul li a{
+            font-size: 1.5rem ;
+        }
+    
+         .navbar ul li:hover .subtasks ul li:hover .subsubtasks{
+            margin-left:25px ;
+         }
+    
+         .navbar ul li:hover .subtasks ul li:hover .subsubtasks ul{
+           
+           
+         }
+    
+         .navbar ul li:hover .subtasks ul li:hover .subsubtasks ul li{
+          
+         }
+    
+         .navbar ul li:hover .subtasks ul li:hover .subsubtasks ul li a{
+            font-size: 1.3rem ;
+           
+         }
+
+         
+        
+    
+     }
+
+
